@@ -1,6 +1,6 @@
-
+const baseUrl='http://3.129.11.158'
 const form = document.querySelector('form')
-const name = document.querySelector('#name')
+const nameEl = document.querySelector('#name')
 const company = document.querySelector('#company')
 const email = document.querySelector('#email')
 const phone = document.querySelector('#phone')
@@ -12,7 +12,7 @@ function renderUsers() {
 res.data.map((el, i)=> {
     return container.innerHTML += `
     <tr name=${i}>
-        <td>${name}</td>
+        <td>${nameEl}</td>
         <td>${company}</td>
         <td>${email}</td>
         <td>${phone}</td>
@@ -24,7 +24,7 @@ document.querySelectorAll('tr').forEach(element => {
 
     element.addEventListener('click', () => {
         axios
-            .delete(`/api/users/${theIndexValue}`)
+            .delete(`${baseUrl}/api/users/${theIndexValue}`)
             .then(res => {
                 renderUsers(res)
             })
@@ -36,7 +36,7 @@ function submitHandler(e) {
     e.preventDefault();
 
     axios
-        .post(`/api/users`, { 
+        .post(`${baseUrl}/api/users`, { 
             name: name.value,
             company: company.value,
             email: email.value,
@@ -64,7 +64,7 @@ function submitHandler(e) {
 }
 
 //get all users on initial load
-axios.get(`/api/users`)
+axios.get(`${baseUrl}/api/users`)
     .then(res=> {
         renderUsers(res)
     })
