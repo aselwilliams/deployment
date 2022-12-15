@@ -6,7 +6,7 @@ const email = document.querySelector('#email')
 const phone = document.querySelector('#phone')
 const container = document.querySelector('tbody')
 
-function renderUsers() {
+function renderUsers(res) {
   container.innerHTML = ''
 
 res.data.map((el, i)=> {
@@ -37,7 +37,7 @@ function submitHandler(e) {
 
     axios
         .post(`${baseUrl}/api/users`, { 
-            name: name.value,
+            name: nameEl.value,
             company: company.value,
             email: email.value,
             phone: phone.value })
@@ -45,7 +45,7 @@ function submitHandler(e) {
             renderUsers(res)
         })
         .catch(err => {
-            name.value = ''
+            nameEl.value = ''
             company.value = ''
             email.value = ''
             phone.value = ''
