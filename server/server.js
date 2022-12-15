@@ -24,10 +24,10 @@ app.use(express.static('public'))
 
 const users = [
     {
-        name:"Camran",
-        company:"G5",
-        email:"camran@gmail.com",
-        phone:"3031245698"
+        "name":"Camran",
+        "company":"G5",
+        "email":"camran@gmail.com",
+        "phone":"3031245698"
     }
 ]
 
@@ -58,6 +58,7 @@ app.post('/api/users', (req, res) => {
  
     try {
         if (index === -1 && name !== '') {
+            console.log(req.body,'body')
             users.push(req.body)
             rollbar.info('Someone added a new user')
             res.status(200).send(users)

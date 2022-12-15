@@ -66,6 +66,8 @@ function submitHandler(e) {
 //get all users on initial load
 axios.get(`${baseUrl}/api/users`)
     .then(res=> {
+        console.log(res,'res')
+        console.log(res.data)
         renderUsers(res)
     })
 
