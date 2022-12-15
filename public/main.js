@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:8040'
+
 const form = document.querySelector('form')
 const name = document.querySelector('#name')
 const company = document.querySelector('#company')
@@ -24,7 +24,7 @@ document.querySelectorAll('tr').forEach(element => {
 
     element.addEventListener('click', () => {
         axios
-            .delete(`${baseUrl}/api/users/${theIndexValue}`)
+            .delete(`/api/users/${theIndexValue}`)
             .then(res => {
                 renderUsers(res)
             })
@@ -36,7 +36,7 @@ function submitHandler(e) {
     e.preventDefault();
 
     axios
-        .post(`${baseUrl}/api/users`, { 
+        .post(`/api/users`, { 
             name: name.value,
             company: company.value,
             email: email.value,
@@ -64,7 +64,7 @@ function submitHandler(e) {
 }
 
 //get all users on initial load
-axios.get(`${baseUrl}/api/users`)
+axios.get(`/api/users`)
     .then(res=> {
         renderUsers(res)
     })

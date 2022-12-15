@@ -26,7 +26,7 @@ const users = [
     {
         name:"Camran",
         company:"G5",
-        email:"camran@aol.com",
+        email:"camran@gmail.com",
         phone:"3031245698"
     }
 ]
