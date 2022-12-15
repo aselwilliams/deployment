@@ -10,6 +10,9 @@ body{
 
 .hero{
     background-image: url('https://assets.website-files.com/5f7533fe3ad0a039ce5f1006/5f81cf2b8f8ef51821098771_0-2.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: fill;
     height: 80vh;
     width: 100vw;
 }
