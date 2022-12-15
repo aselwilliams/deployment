@@ -1,10 +1,73 @@
 * {
     font-family: Calibri;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
 }
 body{
-    background-color: slategrey;
-    color:white;
+    background-color: #eee;
+}
+
+.hero{
+    background-image: url('https://assets.website-files.com/5f7533fe3ad0a039ce5f1006/5f81cf2b8f8ef51821098771_0-2.jpeg');
+    height: 80vh;
+    width: 100vw;
+}
+.content{
+   text-align: center;
+   position:absolute;
+   top:5rem;
+   left:40%; 
+   font-size: larger;
+   color:white;
 }
 h1{
+    margin-bottom:1.5rem;
+}
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main{
     text-align: center;
+    margin:3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    background-color: slategrey;
+    width: 70vw;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+input{
+    padding:0.8rem;
+    width: 400px;
+    margin:0.2rem;
+    border-radius: 0.5rem;
+    border:none;
+}
+.info{
+    margin:2rem;
+    font-weight: 700;
+}
+button {
+    padding:0.9rem 1.3rem;
+    margin:1rem;
+    border:white solid 2px;
+    color:white;
+    background-color: darkblue;
+    font-size: 1rem;
+}
+#hero-btn{
+    background-color: slategray;
+    font-weight: 600;
+    font-size:1.2rem;
+    margin-top: 2.5rem;
 }
