@@ -12,10 +12,10 @@ function renderUsers() {
 res.data.map((el, i)=> {
     return container.innerHTML += `
     <tr name=${i}>
-        <td>${nameEl}</td>
-        <td>${company}</td>
-        <td>${email}</td>
-        <td>${phone}</td>
+        <td>${el.name}</td>
+        <td>${el.company}</td>
+        <td>${el.email}</td>
+        <td>${el.phone}</td>
     </tr>
     `
 })
