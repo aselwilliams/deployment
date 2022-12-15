@@ -1,4 +1,4 @@
-const baseUrl='http://3.129.11.158'
+const baseUrl='https://3.129.11.158'
 const form = document.querySelector('form')
 const nameEl = document.querySelector('#name')
 const company = document.querySelector('#company')
