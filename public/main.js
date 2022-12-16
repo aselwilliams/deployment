@@ -9,7 +9,7 @@ const container = document.querySelector('tbody')
 function renderUsers(res) {
   container.innerHTML = ''
 
-res.data.map((el, i)=> {
+res.map((el, i)=> {
     return container.innerHTML += `
     <tr name=${i}>
         <td>${el.name}</td>
