@@ -11,12 +11,13 @@ function renderUsers(res) {
 
 res.map((el, i)=> {
     return container.innerHTML += `
-    <tr name=${i}>
-        <td>${el.name}</td>
-        <td>${el.company}</td>
-        <td>${el.email}</td>
-        <td>${el.phone}</td>
-    </tr>
+    <p>${el.name}</p>
+    // <tr name=${i}>
+    //     <td>${el.name}</td>
+    //     <td>${el.company}</td>
+    //     <td>${el.email}</td>
+    //     <td>${el.phone}</td>
+    // </tr>
     `
 })
 document.querySelectorAll('tr').forEach(element => {
@@ -37,18 +38,19 @@ function submitHandler(e) {
 
     axios
         .post(`${baseUrl}/api/users`, { 
-            name: nameEl.value,
-            company: company.value,
-            email: email.value,
-            phone: phone.value })
+            name: nameEl.value
+            // company: company.value,
+            // email: email.value,
+            // phone: phone.value
+         })
         .then(res => {
             renderUsers(res)
         })
         .catch(err => {
             nameEl.value = ''
-            company.value = ''
-            email.value = ''
-            phone.value = ''
+            // company.value = ''
+            // email.value = ''
+            // phone.value = ''
 
             const notif = document.createElement('aside')
             notif.innerHTML = `<p>${err.response.data}</p>
